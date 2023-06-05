@@ -8,6 +8,6 @@ WordPress Admin Panel:
 **Password**: ${globals.wp_admin_pass}  
 
 phpMyAdmin Panel:   
-**URL**: [https://${globals.db_host}:${globals.db_port}/](https://${globals.db_host}:${globals.db_port}/)  
+**URL**: [https://node109-shared-db.vhp.jele.cloud/](https://node109-shared-db.vhp.jele.cloud/)  
 **Username**: ${globals.db_user}    
 **Password**: ${globals.db_pass}  
