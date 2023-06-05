@@ -8,6 +8,6 @@ WordPress Admin Panel:
 **Password**: ${globals.wp_admin_pass}  
 
 PhpMyAdmin Admin Panel:   
-**URL**: [https://${settings.envName}.${globals.domain}:8443/](https://${settings.envName}.${globals.domain}:8443/)  
+**URL**: [https://${globals.db_host}:${globals.db_port}/](https://${globals.db_host}:${globals.db_port}/)  
 **Username**: ${globals.db_user}    
 **Password**: ${globals.db_pass}  
