@@ -71,15 +71,15 @@ settings:
     caption: Owner
 
 globals:
-  wp_jps: https://raw.githubusercontent.com/jelastic-jps/wordpress/v2.2.0
+  wp_jps: https://raw.githubusercontent.com/sych74/wordpress/extDB
   wp_admin_pass: ${fn.password(10)}
-  db_admin_user:
-  db_admin_pass:
-  db_host:
-  db_port:
+  db_admin_user: root
+  db_admin_pass: FSOzgl63091
+  db_host: 188.42.111.246
+  db_port: 11000
   db_user: user-${fn.random}
   db_pass: ${fn.password(10)}
-  db_name: wp-${fn.random}
+  db_name: wp_${fn.random}
   PROTOCOL: http
 
 onInstall:
@@ -101,6 +101,8 @@ onInstall:
         cdn-addon: ${settings.cdn-addon:false}
         mu-addon: false
         woocommerce: false
+        DB_ADMIN_USER: ${globals.db_admin_user}
+        DB_ADMIN_PASS: ${globals.db_admin_pass}
         DB_USER: ${globals.db_user}
         DB_PASS: ${globals.db_pass}
         DB_NAME: ${globals.db_name}
