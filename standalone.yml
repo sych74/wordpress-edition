@@ -73,8 +73,13 @@ settings:
 globals:
   wp_jps: https://raw.githubusercontent.com/jelastic-jps/wordpress/v2.2.0
   wp_admin_pass: ${fn.password(10)}
+  db_admin_user:
+  db_admin_pass:
+  db_host:
+  db_port:
   db_user: user-${fn.random}
   db_pass: ${fn.password(10)}
+  db_name: wp-${fn.random}
   PROTOCOL: http
 
 onInstall:
@@ -98,6 +103,9 @@ onInstall:
         woocommerce: false
         DB_USER: ${globals.db_user}
         DB_PASS: ${globals.db_pass}
+        DB_NAME: ${globals.db_name}
+        DB_HOST: ${globals.db_host}
+        DB_PORT: ${globals.db_port}
         WP_ADMIN_PASS: ${globals.wp_admin_pass}
         success_email: false
         project: ${settings.project:default}
